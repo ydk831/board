@@ -1,0 +1,25 @@
+server:
+    port: 8000
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://35.73.210.60:3306/my_rds_name?serverTimezone=Asia/Seoul
+        username: admin
+        password: qwer!234
+
+    jpa:
+        open-in-view: true
+        hibernate:
+            ddl-auto: create
+            naming:
+                physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+            use-new-id-generator-mappings: false
+        show-sql: true
+        properties:
+            "[hibernate.format_sql]": true
+            "[dialect]": org.hibernate.dialect.MySQL5InnoDBDialect
+
+logging:
+    level:
+        "[org.hibernate.SQL]": debug
+
