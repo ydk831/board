@@ -1,19 +1,17 @@
-package com.mypjt.board.model.dao;
+package com.mypjt.board.model.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 @Getter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
+@SuperBuilder
 @Entity
+@NoArgsConstructor // entity는 기본 생성자가 꼭 필요하다.
 public class User extends BaseTimeEntity{
     @Id 
     String id;
